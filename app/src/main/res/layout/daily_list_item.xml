@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                tools:background="#ffaa00">
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/partly_cloudy"/>
+
+    <TextView
+        android:id="@+id/dayNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/iconImageView"
+        android:layout_toRightOf="@+id/iconImageView"
+        android:textColor="#ffffffff"
+        android:textSize="24sp"
+        tools:text="Wednesday"/>
+
+    <ImageView
+        android:id="@+id/temperatureMinImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/temperatureMaxImageView"
+        android:layout_toStartOf="@+id/temperatureMaxImageView"
+        app:srcCompat="@drawable/bg_temperature"/>
+
+    <ImageView
+        android:id="@+id/temperatureMaxImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/bg_temperature"/>
+
+    <TextView
+        android:id="@+id/temperatureMinLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/temperatureMinImageView"
+        android:layout_alignEnd="@+id/temperatureMinImageView"
+        android:layout_alignLeft="@+id/temperatureMinImageView"
+        android:layout_alignRight="@+id/temperatureMinImageView"
+        android:layout_alignStart="@+id/temperatureMinImageView"
+        android:layout_alignTop="@+id/temperatureMinImageView"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#f29019"
+        android:textSize="18sp"
+        tools:text="100"/>
+
+    <TextView
+        android:id="@+id/temperatureMaxLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/temperatureMaxImageView"
+        android:layout_alignEnd="@+id/temperatureMaxImageView"
+        android:layout_alignLeft="@+id/temperatureMaxImageView"
+        android:layout_alignRight="@+id/temperatureMaxImageView"
+        android:layout_alignStart="@+id/temperatureMaxImageView"
+        android:layout_alignTop="@+id/temperatureMaxImageView"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#f29019"
+        android:textSize="18sp"
+        tools:text="100"/>
+</RelativeLayout>

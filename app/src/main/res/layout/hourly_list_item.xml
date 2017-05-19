@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                tools:background="#ffaa00">
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffffff"
+        android:textSize="24sp"
+        tools:text="12 PM"/>
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/timeLabel"
+        android:layout_toRightOf="@+id/timeLabel"
+        app:srcCompat="@drawable/partly_cloudy"/>
+
+    <ImageView
+        android:id="@+id/temperatureImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/bg_temperature"/>
+
+    <TextView
+        android:id="@+id/temperatureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/temperatureImageView"
+        android:layout_alignEnd="@+id/temperatureImageView"
+        android:layout_alignLeft="@+id/temperatureImageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/temperatureImageView"
+        android:layout_alignStart="@+id/temperatureImageView"
+        android:layout_alignTop="@+id/temperatureImageView"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#f29019"
+        android:textSize="18sp"
+        tools:text="100"/>
+
+    <TextView
+        android:id="@+id/summaryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iconImageView"
+        android:layout_toLeftOf="@+id/temperatureImageView"
+        android:layout_toRightOf="@+id/iconImageView"
+        android:layout_toStartOf="@+id/temperatureImageView"
+        android:paddingEnd="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingStart="15dp"
+        android:textAlignment="center"
+        android:textColor="#ffffffff"
+        tools:text="Partly Cloudy"/>
+
+</RelativeLayout>

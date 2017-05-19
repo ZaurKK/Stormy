@@ -1,10 +1,12 @@
-package com.zaurkandokhov.stormy;
+package com.zaurkandokhov.stormy.weather;
+
+import com.zaurkandokhov.stormy.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CurrentWeather {
+public class Current {
     private String mIcon;
     private long mTime;
     private double mTemperature;
@@ -13,7 +15,7 @@ public class CurrentWeather {
     private String mSummary;
     private String mTimeZone;
 
-    public CurrentWeather(String icon, long time, double temperature, double humidity, double precipChance, String summary, String timeZone) {
+    public Current(String icon, long time, double temperature, double humidity, double precipChance, String summary, String timeZone) {
         mIcon = icon;
         mTime = time;
         mTemperature = temperature;
@@ -28,43 +30,7 @@ public class CurrentWeather {
     }
 
     public int getIconId() {
-        // clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, or partly-cloudy-night
-        int iconId = R.drawable.clear_day;
-        switch (mIcon) {
-            case "clear-day":
-                iconId = R.drawable.clear_day;
-                break;
-            case "clear-night":
-                iconId = R.drawable.clear_night;
-                break;
-            case "rain":
-                iconId = R.drawable.rain;
-                break;
-            case "snow":
-                iconId = R.drawable.snow;
-                break;
-            case "sleet":
-                iconId = R.drawable.sleet;
-                break;
-            case "wind":
-                iconId = R.drawable.wind;
-                break;
-            case "fog":
-                iconId = R.drawable.fog;
-                break;
-            case "cloudy":
-                iconId = R.drawable.cloudy;
-                break;
-            case "partly-cloudy-day":
-                iconId = R.drawable.partly_cloudy;
-                break;
-            case "partly-cloudy-night":
-                iconId = R.drawable.cloudy_night;
-                break;
-        }
-
-        return iconId;
-    }
+        return Forecast.getIconId(mIcon);}
 
     public void setIcon(String icon) {
         mIcon = icon;
@@ -88,7 +54,7 @@ public class CurrentWeather {
     }
 
     public int getTemperature() {
-        return (int) Math.round(mTemperature);
+        return Forecast.fahrenheitToCelsius(mTemperature);
     }
 
     public void setTemperature(double temperature) {
